@@ -1,0 +1,12 @@
+.ItemListContainer{
+    background-color: #10691c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    border-color: white;
+    border-style: solid;
+    padding: 2rem;
+    height: 50vh;
+}
