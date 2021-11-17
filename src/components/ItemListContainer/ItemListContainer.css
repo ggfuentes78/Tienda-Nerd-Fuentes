@@ -10,3 +10,12 @@
     padding: 2rem;
     height: 50vh;
 }
+
+.btn-agregar{
+    border-radius: 0.5rem;
+    border-style:hidden;
+    font-size: 1.3rem;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    color:#10691c ;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css';
+import logo from '../../img/logo94_w.png';
 
 
 const NavBar = () =>{
@@ -9,7 +10,7 @@ const NavBar = () =>{
         <nav>
             <div className="nav-wrapper green darken-3">
               <div className='logoContainer'>
-                <a href="#" className="brand-logo"><img src="./logo94_w.png" alt="Tienda Nerd"></img></a>
+                <a href="" className="brand-logo"><img src={logo} alt="Tienda Nerd"></img></a>
               </div>
               <div className='NavBarItems'>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
