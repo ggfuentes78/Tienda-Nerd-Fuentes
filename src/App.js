@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar>
-        </NavBar>
+        <NavBar/>
       </header>
       <div className="Principal">
         <ItemListContainer greeting='Bienvenido a Tienda Nerd!' />

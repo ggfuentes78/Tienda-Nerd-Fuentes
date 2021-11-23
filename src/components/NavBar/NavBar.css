@@ -17,4 +17,8 @@ a.brand-logo{
 
 nav a img{
     padding-left: 1em;
-  }
+}
+
+.App-header{
+    z-index: 1000000;
+}

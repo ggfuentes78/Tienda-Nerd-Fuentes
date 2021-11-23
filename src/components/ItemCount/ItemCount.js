@@ -28,7 +28,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 setStockDisponible(stockDisponible-counter);
                 onAdd(counter);
                 console.log(`En el carrito hay ${carrito+counter} items`)
-                if (stockDisponible-counter==0){
+                if (stockDisponible-counter===0){
                     setCounter(0);
                 }else{
                     setCounter(parseInt(initial));
@@ -56,7 +56,3 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
 export default ItemCount
 
-{/* <Button.Group> */}
-          {/* <Button icon='plus' onClick={this.handleShow} /> */}
-          {/* <Button icon='minus' onClick={this.handleHide} /> */}
-        {/* </Button.Group> */}
