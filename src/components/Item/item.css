@@ -6,3 +6,17 @@
     padding: 1rem !important;
     margin: 1rem !important;
 }
+.cardDescription{
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn-agregar{
+    border-radius: 0.5rem;
+    border-style:hidden;
+    font-size: 1.3rem;
+    background-color: rgb(230, 0, 230);
+    padding: 0.5rem;
+    color:#ffffff ;
+}

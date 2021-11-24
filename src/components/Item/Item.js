@@ -10,21 +10,23 @@ const Item = ({data}) => {
 	}
 
 	return(
-	  	<Card className='Item'>
-    	    <Image src={data.thumbnailUrl} wrapped ui={false} />
+	  	<a id={data.id} href="www.google.com"><Card className='Item'>
+    	    <Image src={data.images.poster.url} wrapped ui={false} />
     	    <Card.Content>
 				<Card.Header>{data.title}</Card.Header>
 				<Card.Meta>
-					<span className='date'>{data.id}</span>
+					<span className='date'>{data.developer}</span>
 				</Card.Meta>
-				<Card.Description>{data.url}</Card.Description>
+				<Card.Description className='cardDescription'>${data.price.amount}</Card.Description>
 			</Card.Content>
+			{/* <button className='btn-agregar'>Comprar</button> */}
 			<ItemCount 
     			stock='10'
     			initial='1'
     			onAdd={onAdd}
 			/>
-		</Card>
+		</Card></a>
+
 	)
 }
 
