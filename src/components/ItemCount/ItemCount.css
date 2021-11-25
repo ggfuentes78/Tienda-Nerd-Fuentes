@@ -1,7 +1,13 @@
+.itemCount{
+    display: flex;
+    justify-content: center;
+}
+
 .inputCant{
     width: 5rem;
     color: black; 
     font-size: 0.5rem;
+    font-weight: bolder;
     text-align: center;
     align-items: center;
 }
@@ -11,6 +17,7 @@
     border-style:hidden;
     font-size: 1.3rem;
     background-color: rgb(230, 0, 230);
-    padding: 0.5rem;
+    margin-left: 2rem;
+    padding: 0.7rem;
     color:#ffffff ;
 }

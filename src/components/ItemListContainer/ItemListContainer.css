@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     color: whitesmoke;
-    border-color: white;
-    border-style: solid;
     padding: 2rem;
     margin-top: 7rem;
+    width: 100%;
+    height: auto;
 }

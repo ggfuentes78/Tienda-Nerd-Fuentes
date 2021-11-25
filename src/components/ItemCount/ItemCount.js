@@ -41,15 +41,16 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
      return (
-        <Form>
+        <Form className='itemCount'>
             <Form.Group>
                 <Button.Group >
                 <Button icon='plus' onClick={handlerCounterUp} />  
                 <Form.Input fluid placeholder={counter} readOnly className='inputCant'/>
                 <Button icon='minus' onClick={handlerCounterDown} />
                 </Button.Group>
+                <button className='btn-agregar' onClick={handlerAddItems}>Agregar al carrito</button>
             </Form.Group>
-            <button className='btn-agregar' onClick={handlerAddItems}>Agregar al carrito</button>
+            
         </Form>
     )
 }
