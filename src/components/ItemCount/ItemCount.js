@@ -1,20 +1,24 @@
+//React
 import React, { useState } from 'react';
+//Semantic UI
 import { Form, Button } from 'semantic-ui-react';
+//Estilos
 import './ItemCount.css';
+
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
-    const [counter, setCounter] = useState(parseInt(initial));
-    const [carrito, setCarrito] = useState(0);
-    const [stockDisponible, setStockDisponible] = useState(stock);
+    const [counter, setCounter] = useState(parseInt(initial)); //Cuenta items a agregar al carrito
+    const [carrito, setCarrito] = useState(0); //Totaliza cantidad de items en el carrito
+    const [stockDisponible, setStockDisponible] = useState(stock); //Actualiza el stock segun lo recibido como disponible y restandole lo que se agrega al carrito
 
-    const handlerCounterUp=()=>{
+    const handlerCounterUp=()=>{ //Aumenta la cantidad a comprar al presionar el boton +
         if (counter<stockDisponible){
             setCounter(counter + 1);
         }
     }
 
-    const handlerCounterDown=()=>{
+    const handlerCounterDown=()=>{ //Decrementa el contador de items a comprar al presionar -
         if (counter>0){
             setCounter(counter - 1);
         }
@@ -40,6 +44,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
 
+//Dibuja los botones para seleccionar las cantidades a comprar y controla stock que recibe por props
      return (
         <Form className='itemCount'>
             <Form.Group>

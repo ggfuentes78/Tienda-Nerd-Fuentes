@@ -1,6 +1,8 @@
 import React from 'react';
+//Estilos
 import './CartWidget.css';
 
+//Icono del carrito para el NAvBar
 const CartWidget = () => {
     return (
         <div className='carrito'>

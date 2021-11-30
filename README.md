@@ -1,4 +1,13 @@
-<<<<<<< HEAD
+# Tienda-Nerd-Fuentes
+Proyecto del Curso de ReactJS de CoderHouse
+
+Se trata de una tienda online que ofrece productos de la cultura pop actuales y retro
+
+En logar de async-mock por el momento se usa una API que consulta juegos de XBOX (aprovechando que una de las secciones originales era de gaming)
+
+Al momento de la primera entrega del proyecto final se ajustaron las categorias para aprovechar lo que ofrece la API, luego la oferta de productos sera reemplazada por contenido propio-
+
+-----------------------///////////////////////-----------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,7 +78,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Tienda-Nerd-Fuentes
-Proyecto del Curso de ReactJS de Coder
->>>>>>> c7dfbe2b328a9c9ee35de7f2f57273ac483e4b82
+

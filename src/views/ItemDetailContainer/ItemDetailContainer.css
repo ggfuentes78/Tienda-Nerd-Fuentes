@@ -1,6 +1,13 @@
-.ItemListContainer{
+div.description.detail{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ItemDetailtContainer{
     background-color: #21bd35;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;

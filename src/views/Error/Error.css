@@ -1,0 +1,6 @@
+.ErrorPage{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 90%;
+}
