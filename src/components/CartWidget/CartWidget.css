@@ -3,10 +3,20 @@ nav i.xl{
 }
 
 .btn-carrito{
+    display: flex;
+    align-items: center;
     border-radius: 50%; 
     border-color: rgb(255, 255, 255); 
     margin-right: 2rem;
     border-style: solid;
     color: white;
     cursor: pointer;
+}
+
+.carrito{
+    display: flex;
+}
+
+div.carrito button.p{
+    font-size: 5px;
 }

@@ -1,22 +1,23 @@
 .itemCount{
     display: flex;
+    align-items: center;
 }
 
 .inputCant{
     width: 5rem;
     color: black; 
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     font-weight: bolder;
     text-align: center;
     align-items: center;
 }
 
-.btn-agregar{
-    border-radius: 0.5rem;
-    border-style:hidden;
-    font-size: 1.3rem;
-    background-color: rgb(230, 0, 230);
-    margin-left: 2rem;
-    padding: 0.7rem;
-    color:#ffffff ;
-}
+
+
+
+
+
+
+
+
+

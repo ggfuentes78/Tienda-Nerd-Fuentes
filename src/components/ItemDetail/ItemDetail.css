@@ -1,0 +1,42 @@
+.btn-itemDetail{
+    border-radius: 0.5rem;
+    border-style:hidden;
+    font-size: 1.3rem;
+    background-color: rgb(230, 0, 230);
+    margin-left: 2rem;
+    padding: 0.7rem;
+    height: 100%;
+    color:#ffffff ;
+}
+
+.btn-itemDetail:hover{
+    cursor: pointer;
+}
+
+.btn-itemTerminar{
+    border-radius: 0.5rem;
+    border-style:hidden;
+    font-size: 1.3rem;
+    background-color: rgb(230, 0, 230);
+    padding: 0.7rem;
+    height: 100%;
+    color:#ffffff ;
+}
+
+.invisible{
+    visibility: hidden;
+    pointer-events: none
+}
+
+.visible{
+    visibility: visible;
+    pointer-events:all; 
+    height: 100%;
+    width: auto;
+    margin-left: 2rem;    
+}
+
+.botones{
+    display: flex;
+    align-items: stretch;
+}

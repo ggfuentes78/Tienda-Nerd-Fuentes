@@ -6,11 +6,11 @@ import { Form, Button } from 'semantic-ui-react';
 import './ItemCount.css';
 
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stockDisponible, setStockDisponible, initial, onAdd}) => {
 
     const [counter, setCounter] = useState(parseInt(initial)); //Cuenta items a agregar al carrito
-    const [carrito, setCarrito] = useState(0); //Totaliza cantidad de items en el carrito
-    const [stockDisponible, setStockDisponible] = useState(stock); //Actualiza el stock segun lo recibido como disponible y restandole lo que se agrega al carrito
+    //const [carrito, setCarrito] = useState(0); //Totaliza cantidad de items en el carrito
+    // const [stockDisponible, setStockDisponible] = useState(stock); //Actualiza el stock segun lo recibido como disponible y restandole lo que se agrega al carrito
 
     const handlerCounterUp=()=>{ //Aumenta la cantidad a comprar al presionar el boton +
         if (counter<stockDisponible){
@@ -28,10 +28,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
         
         if(counter>0){
             if (counter<=stockDisponible){
-                setCarrito(carrito+counter);
+                //setCarrito(carrito+counter);
                 setStockDisponible(stockDisponible-counter);
                 onAdd(counter);
-                console.log(`En el carrito hay ${carrito+counter} items`)
+                //console.log(`En el carrito hay ${carrito+counter} items`)
                 if (stockDisponible-counter===0){
                     setCounter(0);
                 }else{
@@ -53,9 +53,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <Form.Input fluid placeholder={counter} readOnly className='inputCant'/>
                 <Button icon='minus' onClick={handlerCounterDown} />
                 </Button.Group>
-                <button className='btn-agregar' onClick={handlerAddItems}>Agregar al carrito</button>
+                <button className='btn-itemDetail' onClick={handlerAddItems}>Agregar al carrito</button>
             </Form.Group>
-            
         </Form>
     )
 }

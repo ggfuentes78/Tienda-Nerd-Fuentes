@@ -14,8 +14,8 @@ const ItemList = ({items}) => {
             {items.map((item) => {
 					return (
                         //Link dinamico al id del item
-                        <Link to={`/item/${item.id}`}> 
-                            <Item data={item} key={item.id} />
+                        <Link to={`/item/${item.id}`} key={item.id}> 
+                            <Item data={item}/>
                         </Link>
                     )
 				})}
