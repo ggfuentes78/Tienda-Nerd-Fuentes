@@ -2,7 +2,11 @@
 import './App.css';
 
 //Componentes
-import NavBar from './components/NavBar/NavBar.js'
+import NavBar from './components/NavBar/NavBar.js';
+
+//Context Provider
+import { CartProvider } from './components/CartContext/CartContext';
+
 
 //Views
 import ItemListContainer from './views/ItemListContainer/ItemListContainer';
@@ -22,23 +26,25 @@ function App() {
     e.stopPropagation()
 }
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header"> 
-          <NavBar />
-        </header>
-        <div className="Principal" onClick={clickHandler}>
-          <Routes> 
-            <Route path="/" element={<ItemListContainer greeting='Bienvenido a Tienda Nerd!'/>} />
-            <Route path="/category/:id" element={<ItemListContainer />} />
-            <Route path="/item/:id" element={<ItemDetailContainer />} />
-            <Route path="/contacto" element={<Contacto />} />
-            <Route path="/cart" element={<Carrito itemsCarrito={0} />} />
-            <Route path="*" element={<Error/>} />
-          </Routes> 
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <header className="App-header"> 
+            <NavBar />
+          </header>
+          <div className="Principal" onClick={clickHandler}>
+            <Routes> 
+              <Route path="/" element={<ItemListContainer greeting='Bienvenido a Tienda Nerd!'/>} />
+              <Route path="/category/:id" element={<ItemListContainer />} />
+              <Route path="/item/:id" element={<ItemDetailContainer />} />
+              <Route path="/contacto" element={<Contacto />} />
+              <Route path="/cart" element={<Carrito itemsCarrito={0} />} />
+              <Route path="*" element={<Error/>} />
+            </Routes> 
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </CartProvider>
   );
 }
 

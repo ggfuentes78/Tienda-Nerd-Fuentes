@@ -1,12 +1,15 @@
 //React
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 //Semantic UI
 import { Grid, Image } from 'semantic-ui-react';
 //Estilos
 import "./ItemDetail.css";
 //Componentes
 import ItemCount from '../ItemCount/ItemCount';
-import { Link, useLinkClickHandler } from 'react-router-dom';
+//Context
+import { CartContext } from '../CartContext/CartContext';
+//React Router Dom 6.0.2
+import { Link } from 'react-router-dom';
 
 const stock=10;
 
@@ -14,18 +17,18 @@ const ItemDetail = ({item}) => {
 
 //Muestra mensaje cuando se agregan items al carrito
     
-    const [carrito, setCarrito] = useState(0); //Totaliza cantidad de items en el carrito
+    const [cartContent, setCartContent, addItem, cartIndex] = useContext(CartContext); //Totaliza cantidad de items en el carrito
     
     const [estadoBtnTerminar, setEstadoBtnTerminar] = useState('invisible'); //Determina si el boton Terminar Compra se debe mostrar o no
 
     const [stockDisponible, setStockDisponible] = useState(stock);
 
-    const onAdd = (count) => {
-        setCarrito(count);
+    const onAdd = (item, count) => {
+        addItem(item, count);
         setEstadoBtnTerminar('visible')
     }
 
-    console.log (`Se agregaron ${carrito} items al carrito`)
+    console.log (cartContent)
     
    
 //Arma el detalle de un item (recibido por prop) en un grid de Semantic UI
@@ -45,6 +48,7 @@ const ItemDetail = ({item}) => {
                             setStockDisponible={setStockDisponible}
                             initial='1'
                             onAdd={onAdd}
+                            item={item}
                         />
                         <Link className={`btn-ItemDetail ${estadoBtnTerminar}`} to="/cart">
                             <h2 className="btn-itemTerminar">Terminar compra</h2>

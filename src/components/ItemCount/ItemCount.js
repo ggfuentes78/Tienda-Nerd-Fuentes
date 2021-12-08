@@ -6,7 +6,7 @@ import { Form, Button } from 'semantic-ui-react';
 import './ItemCount.css';
 
 
-const ItemCount = ({stockDisponible, setStockDisponible, initial, onAdd}) => {
+const ItemCount = ({stockDisponible, setStockDisponible, initial, onAdd, item}) => {
 
     const [counter, setCounter] = useState(parseInt(initial)); //Cuenta items a agregar al carrito
     //const [carrito, setCarrito] = useState(0); //Totaliza cantidad de items en el carrito
@@ -30,7 +30,7 @@ const ItemCount = ({stockDisponible, setStockDisponible, initial, onAdd}) => {
             if (counter<=stockDisponible){
                 //setCarrito(carrito+counter);
                 setStockDisponible(stockDisponible-counter);
-                onAdd(counter);
+                onAdd(item, counter);
                 //console.log(`En el carrito hay ${carrito+counter} items`)
                 if (stockDisponible-counter===0){
                     setCounter(0);
