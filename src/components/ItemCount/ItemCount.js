@@ -9,8 +9,6 @@ import './ItemCount.css';
 const ItemCount = ({stockDisponible, setStockDisponible, initial, onAdd, item}) => {
 
     const [counter, setCounter] = useState(parseInt(initial)); //Cuenta items a agregar al carrito
-    //const [carrito, setCarrito] = useState(0); //Totaliza cantidad de items en el carrito
-    // const [stockDisponible, setStockDisponible] = useState(stock); //Actualiza el stock segun lo recibido como disponible y restandole lo que se agrega al carrito
 
     const handlerCounterUp=()=>{ //Aumenta la cantidad a comprar al presionar el boton +
         if (counter<stockDisponible){
@@ -28,10 +26,8 @@ const ItemCount = ({stockDisponible, setStockDisponible, initial, onAdd, item}) 
         
         if(counter>0){
             if (counter<=stockDisponible){
-                //setCarrito(carrito+counter);
                 setStockDisponible(stockDisponible-counter);
                 onAdd(item, counter);
-                //console.log(`En el carrito hay ${carrito+counter} items`)
                 if (stockDisponible-counter===0){
                     setCounter(0);
                 }else{

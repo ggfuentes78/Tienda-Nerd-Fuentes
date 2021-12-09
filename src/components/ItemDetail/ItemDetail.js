@@ -17,7 +17,7 @@ const ItemDetail = ({item}) => {
 
 //Muestra mensaje cuando se agregan items al carrito
     
-    const [cartContent, setCartContent, addItem, cartIndex] = useContext(CartContext); //Totaliza cantidad de items en el carrito
+    const [cartContent, setCartContent, setTotalItems, totalItems, addItem, cartIndex] = useContext(CartContext); //Totaliza cantidad de items en el carrito
     
     const [estadoBtnTerminar, setEstadoBtnTerminar] = useState('invisible'); //Determina si el boton Terminar Compra se debe mostrar o no
 
@@ -51,7 +51,7 @@ const ItemDetail = ({item}) => {
                             item={item}
                         />
                         <Link className={`btn-ItemDetail ${estadoBtnTerminar}`} to="/cart">
-                            <h2 className="btn-itemTerminar">Terminar compra</h2>
+                            <button className="btn-itemTerminar">Terminar compra</button>
                         </Link>
                     </div>
                     <p>{(item.description)}</p>

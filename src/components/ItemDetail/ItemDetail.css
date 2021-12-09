@@ -13,6 +13,9 @@
     cursor: pointer;
 }
 
+.btn-itemTerminar:hover{
+    cursor: pointer;
+}
 .btn-itemTerminar{
     border-radius: 0.5rem;
     border-style:hidden;
@@ -21,6 +24,7 @@
     padding: 0.7rem;
     height: 100%;
     color:#ffffff ;
+    text-align: center;
 }
 
 .invisible{

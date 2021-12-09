@@ -12,7 +12,7 @@ import { CartProvider } from './components/CartContext/CartContext';
 import ItemListContainer from './views/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './views/ItemDetailContainer/ItemDetailContainer';
 import Contacto from './views/Contacto/Contacto';
-import Carrito from './views/Carrito/Carrito';
+import Carrito from './views/Cart/Cart';
 import Error from './views/Error/Error';
 
 //React Router Dom 6.0.2

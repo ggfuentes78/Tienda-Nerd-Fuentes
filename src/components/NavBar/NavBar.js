@@ -1,5 +1,3 @@
-//React
-import React from 'react';
 //Componentes
 import CartWidget from "../CartWidget/CartWidget";
 //Estilos
@@ -8,9 +6,16 @@ import './NavBar.css';
 import logo from '../../img/logo94_w.png';
 //React-Router-Dom
 import{ Link, NavLink} from "react-router-dom"
+//Context
+import { CartContext } from '../CartContext/CartContext';
+//React
+import { useContext} from 'react';
 
 //NavBar de la aplicacion con los links a las distintas categorias
 const NavBar = () =>{
+
+  const [cartContent, setCartContent, setTotalItems, totalItems, addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+
   return(
       <nav>
           <div className="nav-wrapper top green darken-3">
@@ -27,7 +32,7 @@ const NavBar = () =>{
               </ul>
             </div>
             <Link to="/cart" className="link">
-              <CartWidget />
+              {totalItems>0 ? <CartWidget /> : <></>}
             </Link>
           </div>
       </nav>
