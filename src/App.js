@@ -24,7 +24,7 @@ import { collection, query, where, getDocs } from 'firebase/firestore';
 
 
 function App() {
-  
+  console.log(process.env.REACT_APP_API_KEY)
   const clickHandler= (e) =>{
     e.stopPropagation()
 }
