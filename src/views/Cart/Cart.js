@@ -18,7 +18,7 @@ const Cart = () =>{
 
     return (
         <div>
-            {cantItemsCart===0 ? <h2>Carrito vacio</h2> : <CartDetail setCantItemsCart={setCantItemsCart}/>}
+            {cantItemsCart==0 ? <h2>Carrito vacio</h2> : <CartDetail setCantItemsCart={setCantItemsCart}/>}
             <Link to="/"><button className='btn-cart'>Seguir comprando</button></Link>
         </div>
      )    

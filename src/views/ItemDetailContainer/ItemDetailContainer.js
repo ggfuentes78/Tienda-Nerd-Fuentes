@@ -7,6 +7,9 @@ import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import Spinner from '../../components/Spinner/Spinner';
 //Estilos
 import './ItemDetailContainer.css';
+//Firebase
+import { collection, query, where, getDocs, documentId } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig';
 
 //Vista contenedorar del detalle de un Item
 const ItemDetailContainer = () => {
@@ -19,12 +22,19 @@ const ItemDetailContainer = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch (`https://xbox-api.pazguille.me/api/games?id=${prodID}`) //Busca el item en la api segun el parametro (id) de la url
-            .then((response) => response.json()) 
-            .then((json)=>{
-                setItem(json);
-                setIsLoading(false)
+        const getProducts = async () =>{
+            const q = query(collection(db,'ItemCollection'), where(documentId(), '==', prodID));
+            const docs =[];
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                docs.push({ ...doc.data(), id:doc.id });
             });
+            console.log('DATA', docs);
+            setItem(docs);
+            console.log(item)
+            setIsLoading(false);
+        };
+        getProducts();
     }, [prodID]);
 
     return (

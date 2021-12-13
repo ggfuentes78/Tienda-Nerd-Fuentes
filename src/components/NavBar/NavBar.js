@@ -24,10 +24,11 @@ const NavBar = () =>{
             </div>
             <div className='NavBarItems'>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
-                <NavLink activeclassname="active" to="/category/deals" className="Link">Ofertas</NavLink>
-                <NavLink activeclassname="active" to="/category/new" className="Link">Novedades</NavLink>
-                <NavLink activeclassname="active" to="/category/coming" className="Link">Próximamente</NavLink>
-                <NavLink activeclassname="active" to="/category/best" className="Link">TOP</NavLink>
+                <NavLink activeclassname="active" to="/category/comics" className="Link">Comics</NavLink>
+                <NavLink activeclassname="active" to="/category/gaming" className="Link">Gaming</NavLink>
+                <NavLink activeclassname="active" to="/category/bazar" className="Link">Bazar</NavLink>
+                <NavLink activeclassname="active" to="/category/coleccionables" className="Link">Coleccionables</NavLink>
+                <NavLink activeclassname="active" to="/category/accesorios" className="Link">Accesorios</NavLink>
                 <NavLink activeclassname="active" to="/contacto" className="Link">Contacto</NavLink>
               </ul>
             </div>

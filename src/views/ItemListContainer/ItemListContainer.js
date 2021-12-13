@@ -6,12 +6,16 @@ import './ItemListContainer.css';
 //Componentes
 import ItemList from '../../components/ItemList/ItemList';
 import Spinner from '../../components/Spinner/Spinner';
+//Firebase
+import { db } from '../../firebase/firebaseConfig';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+
 
 
 const ItemListContainer = ({greeting}) => {
     
-    let category='new';
-    const [items, setItems] = useState([]);
+    let category='';
+    const [items, setItems] = useState([query(collection(db,'ItemCollection'))]);
     const [isLoading, setIsLoading] = useState(true);
 
     let id = useParams();
@@ -22,17 +26,31 @@ const ItemListContainer = ({greeting}) => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch (`https://xbox-api.pazguille.me/api/games?list=${category}`)
-            .then((response) => response.json())
-            .then((json)=>{
-                setItems(json);
-                setIsLoading(false)
+        const getProducts = async () =>{
+            const q1 = query(collection(db,'ItemCollection'));
+            const q2 = query(collection(db,'ItemCollection'), where('categoryId', '==', category));
+            let q=q1
+            const docs =[];
+            if (category==''){
+                q= q1;
+            }else{
+                q= q2;
+            }
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                docs.push({ ...doc.data(), id:doc.id });
             });
+            console.log('DATA', docs);
+            setItems(docs);
+            console.log(items)
+            setIsLoading(false);
+        };
+        getProducts();
     }, [category]);
 //Vista contenedora de la lista de Items
     return (
         <div className='ItemListContainer'>
-            <h3>{greeting}</h3>
+            <h2>{greeting}</h2>
             {isLoading ? <Spinner /> : <ItemList items={items} />}
         </div>
     );

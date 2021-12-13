@@ -10,13 +10,13 @@ const Item = ({data}) => {
  
 	return(
 	  	<Card className='Item'>
-    	    <Image src={data.images.poster.url} wrapped ui={false} />
+    	    <Image src={data.image} wrapped ui={false} />
     	    <Card.Content>
 				<Card.Header>{data.title}</Card.Header>
-				<Card.Meta>
-					<span className='developer'>{data.developer}</span>
-				</Card.Meta>
-				<Card.Description className='cardDescription'>${data.price.amount}</Card.Description>
+				{/* <Card.Meta> */}
+					{/* <span className='developer'>{data.categoryId}</span> */}
+				{/* </Card.Meta> */}
+				<Card.Description className='cardDescription'>${data.price}</Card.Description>
 			</Card.Content>
 		</Card>
 

@@ -18,6 +18,9 @@ import Error from './views/Error/Error';
 //React Router Dom 6.0.2
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
+//Firebase
+import { db } from './firebase/firebaseConfig';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 
 
 function App() {

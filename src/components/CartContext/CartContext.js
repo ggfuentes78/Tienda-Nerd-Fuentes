@@ -16,9 +16,9 @@ export const CartProvider = ({ children }) => {
             console.log(totalItems)
         }else{
             let newCart= cartContent;
-            newCart.push({'itemId': item.id, 'image': item.images.poster.url , 'name': item.title , 'price': item.price.amount , 'quantity': cant});
+            newCart.push({'itemId': item.id, 'image': item.image , 'name': item.title , 'price': item.price , 'quantity': cant});
             //Uso Spread Operator para modificar el array cartContent con la funcion actualizadora de estado setCartContent
-            //setCartContent(()=>[...cartContent, {'itemId': item.id, 'image': item.images.poster.url , 'name': item.title , 'price': item.price.amount , 'quantity': cant}]);
+            //setCartContent(()=>[...cartContent, {'itemId': item.id, 'image': item.image , 'name': item.title , 'price': item.price , 'quantity': cant}]);
             setCartContent(newCart);
             setTotalItems(itemsInCart(cartContent));
             console.log(totalItems)
@@ -43,8 +43,8 @@ export const CartProvider = ({ children }) => {
     }
 
     const clear = () => {
-        setCartContent({});
-        setTotalItems(itemsInCart(cartContent));
+        setCartContent([]);
+        setTotalItems(0);
     }
 
     const isInCart = (item) => { 

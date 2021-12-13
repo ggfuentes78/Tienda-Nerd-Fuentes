@@ -1,6 +1,7 @@
 .ItemList{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
-    align-items:stretch;   
+    justify-content:left;
+    align-items:stretch;
+    height: 392px;  
 }

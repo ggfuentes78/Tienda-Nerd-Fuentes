@@ -21,6 +21,12 @@ const CartDetail = ({cantItemsCart, setCantItemsCart}) => {
         alert('Compra realizada!'); //mensaje transitorio hasta que se desarrolle la funcionalidad de pago y compra
     }
 
+    const clearBtnClickHandler= () =>{
+        clear();
+        setCantItemsCart(0);
+        console.log('vacio?',cartContent)
+    }
+
     return (
         <div className='cartDetail'>
             {cartContent.map((item) => {
@@ -37,8 +43,9 @@ const CartDetail = ({cantItemsCart, setCantItemsCart}) => {
 
             )})}
             <button className="btn-cart" onClick={()=>terminarCompra()}>Terminar compra</button>
+            <button className="btn-cart" onClick={()=>clearBtnClickHandler()}>Limpiar carrito</button>
         </div>
     )
 }
 
-export default CartDetail
+export default CartDetail;

@@ -5,6 +5,7 @@
     align-items: center;
     padding: 1rem !important;
     margin: 1rem !important;
+    height: 29rem;
 }
 .cardDescription{
     font-weight: bolder;
