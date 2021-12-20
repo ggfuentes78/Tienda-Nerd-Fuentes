@@ -14,6 +14,7 @@ import ItemDetailContainer from './views/ItemDetailContainer/ItemDetailContainer
 import Contacto from './views/Contacto/Contacto';
 import Carrito from './views/Cart/Cart';
 import Error from './views/Error/Error';
+import Shopping from './views/Shopping/Shopping';
 
 //React Router Dom 6.0.2
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
@@ -21,6 +22,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 //Firebase
 import { db } from './firebase/firebaseConfig';
 import { collection, query, where, getDocs } from 'firebase/firestore';
+
 
 
 function App() {
@@ -42,6 +44,7 @@ function App() {
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/cart" element={<Carrito itemsCarrito={0} />} />
+              <Route path="/shopping" element={<Shopping />} />
               <Route path="*" element={<Error/>} />
             </Routes> 
           </div>

@@ -8,11 +8,11 @@ import './CartWidget.css';
 //Icono del carrito para el NavBar
 const CartWidget = () => {
 
-    const [cartContent, setCartContent, setTotalItems, totalItems, addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+    const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
 
     return (
         <div className='carrito'>
-            <button className='btn-carrito green darken-3'><i className='material-icons xl'>shopping_cart</i><p className='totalItems'>{totalItems}</p></button>
+            <button className='btn-carrito'><i className='material-icons xl'>shopping_cart</i><p className='totalItems'>{totalItems}</p></button>
         </div>
     )
 }

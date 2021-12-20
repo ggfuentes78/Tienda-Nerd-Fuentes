@@ -12,13 +12,13 @@ import{ Link } from "react-router-dom"
 
 const Cart = () =>{
 
-    const [cartContent, setCartContent, setTotalItems, totalItems, addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+    const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
 
     const [cantItemsCart, setCantItemsCart] = useState(cartContent.length);
 
     return (
         <div>
-            {cantItemsCart==0 ? <h2>Carrito vacio</h2> : <CartDetail setCantItemsCart={setCantItemsCart}/>}
+            {cantItemsCart===0 ? <h2>Carrito vacio</h2> : <CartDetail setCantItemsCart={setCantItemsCart}/>}
             <Link to="/"><button className='btn-cart'>Seguir comprando</button></Link>
         </div>
      )    

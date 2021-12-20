@@ -1,0 +1,28 @@
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 400px;
+}
+
+.frm-input {
+	width: 400px;
+	font-size: 28px;
+	height: 40px;
+}
+
+
+.form-btn {
+	width: 432px;
+	font-size: 28px;
+	height: 40px;
+}
+.modalEmail{
+	height: auto;
+	align-content: center;
+}
+.fondoModalEmail {
+	left: -10em !important;
+	display: flex !important;
+	align-content: center;
+}

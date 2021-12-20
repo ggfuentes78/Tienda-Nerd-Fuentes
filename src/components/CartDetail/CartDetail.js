@@ -4,21 +4,18 @@ import { CartContext } from '../CartContext/CartContext';
 import { useContext} from 'react';
 //Semantic UI
 import {Icon} from 'semantic-ui-react';
+//React Router Dom
+import { Link } from 'react-router-dom';
 
-
-const CartDetail = ({cantItemsCart, setCantItemsCart}) => {
+const CartDetail = ({cantItems, setCantItemsCart}) => {
     
-    const [cartContent, setCartContent, setTotalItems, totalItems, addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+    const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
     
     const trashIconClickHandler= (itemId) =>{
        console.log(cartContent)
        removeItem(itemId);
        setCantItemsCart(cartContent.length);
-       console.log('vacio?' + cartContent)
-    }
-
-    const terminarCompra = () => {
-        alert('Compra realizada!'); //mensaje transitorio hasta que se desarrolle la funcionalidad de pago y compra
+       console.log('trash', cartContent)
     }
 
     const clearBtnClickHandler= () =>{
@@ -26,7 +23,7 @@ const CartDetail = ({cantItemsCart, setCantItemsCart}) => {
         setCantItemsCart(0);
         console.log('vacio?',cartContent)
     }
-
+    
     return (
         <div className='cartDetail'>
             {cartContent.map((item) => {
@@ -42,7 +39,10 @@ const CartDetail = ({cantItemsCart, setCantItemsCart}) => {
                     </div>
 
             )})}
-            <button className="btn-cart" onClick={()=>terminarCompra()}>Terminar compra</button>
+            <h3>Total:  ${cartTotal}</h3>
+            <Link to="/shopping">
+                <button className="btn-cart">Terminar compra</button>
+            </Link>
             <button className="btn-cart" onClick={()=>clearBtnClickHandler()}>Limpiar carrito</button>
         </div>
     )

@@ -1,16 +1,28 @@
 nav .nav-wrapper{
     height: 7rem;
     display: flex;
-    align-content: stretch;
     align-items: center;
     justify-content: space-between;
+    background-color: rgb(58, 131, 40);
+    color: whitesmoke;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    color: whitesmoke;
 }
 
 nav ul a{
-    display: inline !important;
+    display: flex;
     flex-direction: row;
     font-size: larger;
+    color: whitesmoke;
+    margin-left: 4rem;
 }
+
 
 nav ul a:hover{
     color:yellow;  
@@ -30,6 +42,5 @@ nav a img{
 }
 
 nav ul a.active{
-    background-color: yellowgreen;
-    border-radius: 0.5rem;
+    color: yellow;
 }

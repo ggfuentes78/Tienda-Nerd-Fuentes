@@ -31,7 +31,6 @@ const ItemDetailContainer = () => {
             });
             console.log('DATA', docs);
             setItem(docs);
-            console.log(item)
             setIsLoading(false);
         };
         getProducts();

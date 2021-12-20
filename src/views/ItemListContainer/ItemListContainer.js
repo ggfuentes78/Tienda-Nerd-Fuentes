@@ -31,7 +31,7 @@ const ItemListContainer = ({greeting}) => {
             const q2 = query(collection(db,'ItemCollection'), where('categoryId', '==', category));
             let q=q1
             const docs =[];
-            if (category==''){
+            if (category===''){
                 q= q1;
             }else{
                 q= q2;
@@ -42,7 +42,6 @@ const ItemListContainer = ({greeting}) => {
             });
             console.log('DATA', docs);
             setItems(docs);
-            console.log(items)
             setIsLoading(false);
         };
         getProducts();
