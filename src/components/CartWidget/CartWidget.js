@@ -8,7 +8,6 @@ import './CartWidget.css';
 //Icono del carrito para el NavBar
 const CartWidget = () => {
 
-    // const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
     const [ , , , totalItems, , , , , , , , ] = useContext(CartContext);
 
     return (

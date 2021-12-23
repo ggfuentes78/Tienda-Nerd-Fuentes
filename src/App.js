@@ -11,7 +11,6 @@ import { CartProvider } from './components/CartContext/CartContext';
 //Views
 import ItemListContainer from './views/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './views/ItemDetailContainer/ItemDetailContainer';
-import Contacto from './views/Contacto/Contacto';
 import Carrito from './views/Cart/Cart';
 import Error from './views/Error/Error';
 import Shopping from './views/Shopping/Shopping';
@@ -37,7 +36,6 @@ function App() {
               <Route path="/" element={<ItemListContainer greeting='Bienvenido a Tienda Nerd!'/>} />
               <Route path="/category/:id" element={<ItemListContainer />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
-              <Route path="/contacto" element={<Contacto />} />
               <Route path="/cart" element={<Carrito itemsCarrito={0} />} />
               <Route path="/shopping" element={<Shopping />} />
               <Route path="*" element={<Error/>} />

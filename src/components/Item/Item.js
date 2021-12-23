@@ -13,9 +13,6 @@ const Item = ({data}) => {
     	    <Image src={data.image} wrapped ui={false} />
     	    <Card.Content>
 				<Card.Header>{data.title}</Card.Header>
-				{/* <Card.Meta> */}
-					{/* <span className='developer'>{data.categoryId}</span> */}
-				{/* </Card.Meta> */}
 				<Card.Description className='cardDescription'>${data.price}</Card.Description>
 			</Card.Content>
 		</Card>

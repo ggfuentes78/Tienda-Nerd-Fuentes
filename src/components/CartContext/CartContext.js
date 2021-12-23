@@ -18,8 +18,6 @@ export const CartProvider = ({ children }) => {
         }else{
             let newCart= cartContent;
             newCart.push({'itemId': item.id, 'image': item.image , 'name': item.title , 'price': item.price , 'quantity': cant});
-            //Uso Spread Operator para modificar el array cartContent con la funcion actualizadora de estado setCartContent
-            //setCartContent(()=>[...cartContent, {'itemId': item.id, 'image': item.image , 'name': item.title , 'price': item.price , 'quantity': cant}]);
             setCartContent(newCart);
             setTotalItems(itemsInCart(cartContent));
             setCartTotal(calculaTotal(cartContent));

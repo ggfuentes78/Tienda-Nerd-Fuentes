@@ -6,6 +6,7 @@ import './ItemListContainer.css';
 //Componentes
 import ItemList from '../../components/ItemList/ItemList';
 import Spinner from '../../components/Spinner/Spinner';
+import Error from '../Error/Error';
 //Firebase
 import { db } from '../../firebase/firebaseConfig';
 import { collection, query, where, getDocs } from 'firebase/firestore';
@@ -49,7 +50,7 @@ const ItemListContainer = ({greeting}) => {
     return (
         <div className='ItemListContainer'>
             <h2>{greeting}</h2>
-            {isLoading ? <Spinner /> : <ItemList items={items} />}
+            {isLoading ? <Spinner /> : (items.length===0 ? <Error/> : ( <ItemList items={items} />))}
         </div>
     );
 };

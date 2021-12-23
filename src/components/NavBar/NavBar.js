@@ -14,7 +14,6 @@ import { useContext} from 'react';
 //NavBar de la aplicacion con los links a las distintas categorias
 const NavBar = () =>{
 
-  // const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
   const [ , , , totalItems, , , , , , , , ] = useContext(CartContext);
 
   return(
