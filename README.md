@@ -7,7 +7,16 @@ Se trata de una tienda online que ofrece productos de la cultura pop actuales y 
 
 ## Screenshots del proyecto
 
-coderApp.gif
+![image](https://user-images.githubusercontent.com/89048198/147252938-6a0c7552-7aed-4054-a809-106a9dd65670.png)
+
+![image](https://user-images.githubusercontent.com/89048198/147253109-36912d1b-c04b-4ab4-8da1-b64c1943f41b.png)
+
+![image](https://user-images.githubusercontent.com/89048198/147253207-d0169110-5e78-4a67-adb7-2e9f2c2c365e.png)
+
+![image](https://user-images.githubusercontent.com/89048198/147253315-12ee19b5-4a75-4364-8a36-e0c13d8c8c66.png)
+
+![image](https://user-images.githubusercontent.com/89048198/147253371-74b5bb93-143f-4f04-addd-9d441cbe2ff5.png)
+
 
 ## Instrucciones de instalación y configuración
 
