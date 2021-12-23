@@ -17,6 +17,7 @@ Se trata de una tienda online que ofrece productos de la cultura pop actuales y 
 
 ![image](https://user-images.githubusercontent.com/89048198/147253371-74b5bb93-143f-4f04-addd-9d441cbe2ff5.png)
 
+![Tienda Nerd - Google Chrome 2021-12-23 11-27-30](https://user-images.githubusercontent.com/89048198/147293561-8097448d-63b5-41c4-bfb6-4f5e06295224.gif)
 
 ## Instrucciones de instalación y configuración
 
