@@ -1,81 +1,51 @@
 # Tienda-Nerd-Fuentes
+
 Proyecto del Curso de ReactJS de CoderHouse
 
 Se trata de una tienda online que ofrece productos de la cultura pop actuales y retro
 
-En logar de async-mock por el momento se usa una API que consulta juegos de XBOX (aprovechando que una de las secciones originales era de gaming)
 
-Al momento de la primera entrega del proyecto final se ajustaron las categorias para aprovechar lo que ofrece la API, luego la oferta de productos sera reemplazada por contenido propio-
+## Screenshots del proyecto
 
------------------------///////////////////////-----------------------------------------
-# Getting Started with Create React App
+coderApp.gif
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instrucciones de instalación y configuración
 
-## Available Scripts
+Clona este repositorio. Necesitará `node` y` npm` instalados globalmente en su máquina.  
 
-In the project directory, you can run:
+Instalacion:
 
-### `npm start`
+`npm install`  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para ejecutar Test Suite:  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm test`  
 
-### `npm test`
+Para iniciar el servidor:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm start`  
 
-### `npm run build`
+Para visitar la aplicación:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`localhost:3000/`  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Librerias
+Entre las librerias destacadas que utilice para desarrollar esta app estan:
+-Semantic UI React: debido a que facilita mucho el trabajo a la hora de obtener elementos esteticamente agradables a la vista y funcionales permitiendome poner foco en la funcionalidad propia de la aplicacion.
+-Firebase: La utilice como base de datos donde almacenar la informacion de mis productos, imagenes, stock, etc. Tambien es donde se persisten las ordenes de compra con la idetificacion del usuario, los datos de contacto, la fecha y detalle del pedido con un ID propio.
 
-### `npm run eject`
+## Dependencias
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ "firebase": "^9.6.1",
+ "react": "^17.0.2",
+ "react-dom": "^17.0.2",
+ "react-router-dom": "^6.0.2",
+ "react-scripts": "4.0.3",
+ "semantic-ui-css": "^2.4.1",
+ "semantic-ui-react": "^2.0.4",
+ "web-vitals": "^1.1.2"
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Objetivo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+Este e-commerce es una aplicación para comprar productos de la cultura Pop incluyendo comics, coleccionable, video juegos y otros articulos El proyecto tiene un diseño modular, como ofrece React, donde los componentes se encuentran en carpetas separadas con sus respectivos archivos. Los diseños estarán, en general, en un archivo aparte css y además utilizo Semantic UI React.

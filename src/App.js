@@ -46,6 +46,7 @@ function App() {
               <Route path="/cart" element={<Carrito itemsCarrito={0} />} />
               <Route path="/shopping" element={<Shopping />} />
               <Route path="*" element={<Error/>} />
+              <Route path="/*" element={<Error/>} />
             </Routes> 
           </div>
         </div>

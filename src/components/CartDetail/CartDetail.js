@@ -6,6 +6,9 @@ import { useContext} from 'react';
 import {Icon} from 'semantic-ui-react';
 //React Router Dom
 import { Link } from 'react-router-dom';
+//Estilos
+import './CartDetail.css';
+
 
 const CartDetail = ({cantItems, setCantItemsCart}) => {
     
@@ -39,7 +42,7 @@ const CartDetail = ({cantItems, setCantItemsCart}) => {
                     </div>
 
             )})}
-            <h3>Total:  ${cartTotal}</h3>
+            <h2 className='totalCarrito'>Total:  ${cartTotal}</h2>
             <Link to="/shopping">
                 <button className="btn-cart">Terminar compra</button>
             </Link>

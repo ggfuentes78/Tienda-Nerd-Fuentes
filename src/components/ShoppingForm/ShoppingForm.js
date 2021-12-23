@@ -56,7 +56,7 @@ const ShoppingForm = () => {
     
         if (emailConf===buyer.email){
             setIsLoading(true);
-            const docRef = await addDoc(collection(db, 'Orders'), {buyer , items, date: Timestamp.fromDate(new Date()), total: totalCart})
+            const docRef = await addDoc(collection(db, 'Orders'), {buyer , items, date: Timestamp.fromDate(new Date()), total: totalCart , orderStatus: 'generada'})
             setOrderId(docRef);
             setIsLoading(false);
             setBuyer(initialState);
@@ -75,7 +75,7 @@ const ShoppingForm = () => {
                 <Input placeholder='Telefono' className='frm-input' name="telefono" value={buyer.telefono}  onChange={onChangeHandler} />
                 <Input placeholder='Email' className='frm-input' name="email" value={buyer.email}  onChange={onChangeHandler} />
                 <Input placeholder='Repetir Email' className='frm-input' name="emailConf" value={emailConf}  onChange={onChangeHandler} />
-                {(buyer.nombre!=='' && buyer.telefono!=='' && buyer.email!=='' && emailConf!=='') ? <Button className='form-btn'>Comprar</Button> : <></>}
+                {(buyer.nombre!=='' && buyer.telefono!=='' && buyer.email!=='' && emailConf!=='') ? <Button className='frm-btn'>Comprar</Button> : <></>}
             </form>
             <div className='fondoModalEmail'>
             <Modal className='modalEmail'

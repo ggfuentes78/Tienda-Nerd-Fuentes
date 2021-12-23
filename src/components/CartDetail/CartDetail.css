@@ -1,0 +1,9 @@
+.totalCarrito{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.imgItem{
+    border-radius: 50%;
+    border-color:rgb(58, 131, 40);
+    border-style:ridge;
+}

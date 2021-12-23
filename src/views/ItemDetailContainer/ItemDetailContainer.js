@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 //Componentes
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import Spinner from '../../components/Spinner/Spinner';
+import Error from '../Error/Error';
 //Estilos
 import './ItemDetailContainer.css';
 //Firebase
@@ -38,9 +39,9 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="ItemDetailContainer">
-            {isLoading ? <Spinner /> : (
+            {isLoading ? <Spinner /> : (item.length===0 ? <Error/> : (
                 <ItemDetail item={item[0]}/>     
-                )
+                ))
             }
         </div>  
     )
