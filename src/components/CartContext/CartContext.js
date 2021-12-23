@@ -15,8 +15,6 @@ export const CartProvider = ({ children }) => {
             setCartContent(newCart);
             setTotalItems(itemsInCart(cartContent));
             setCartTotal(calculaTotal(cartContent));
-            console.log('additem if',cartTotal)
-            console.log(totalItems)
         }else{
             let newCart= cartContent;
             newCart.push({'itemId': item.id, 'image': item.image , 'name': item.title , 'price': item.price , 'quantity': cant});
@@ -25,8 +23,6 @@ export const CartProvider = ({ children }) => {
             setCartContent(newCart);
             setTotalItems(itemsInCart(cartContent));
             setCartTotal(calculaTotal(cartContent));
-            console.log('additem - else', cartTotal)
-            console.log(totalItems)
         }
     }
     //Cuenta la cantidad de items en el carrito
@@ -41,22 +37,17 @@ export const CartProvider = ({ children }) => {
         cartContent.map((item)=>
             importeCart+=(item.quantity*item.price)
          )
-         console.log (importeCart);
-         console.log ('importe total', cartContent)
         return importeCart;
     }
 
     const removeItem = (itemId) =>{
-        console.log("remove" + itemId);
         if (isInCart(itemId)){
             let cartRemove= cartContent;
             cartRemove.splice(cartIndex(itemId),1);
             setCartContent(cartRemove);
             setTotalItems(itemsInCart(cartContent));
             setCartTotal(calculaTotal(cartContent));
-            console.log('removeItem', cartTotal)
         }
-        console.log(cartContent);
     }
 
     const clear = () => {
@@ -67,10 +58,8 @@ export const CartProvider = ({ children }) => {
 
     const isInCart = (item) => { 
         if (cartIndex(item) ===-1) {
-            console.log(false)
             return false
         }else{
-            console.log(true)
             return true
         }
     };

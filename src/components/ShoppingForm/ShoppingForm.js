@@ -17,31 +17,27 @@ const initialState = {
 };
 
 const ShoppingForm = () => {
-    const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+    const [cartContent, , , , cartTotal, , , , , clear, , ] = useContext(CartContext);
     const [buyer, setBuyer] = useState(initialState);
     const [orderId, setOrderId] = useState('');
     const [isLoading, setIsLoading] =useState(false);
     const [emailConf, setEmailConf] = useState('');
     const [modalEmail, setModalEmail] = useState(false);
- 
-
-
 
     let items=[];
     let totalCart=cartTotal
 
-    
     cartContent.map( (item) =>{
         items.push({
             id: item.itemId,
             title: item.name,
             price: item.price,
-            quantity: item.quantity}
-        );
-        }
-    );
+            quantity: item.quantity
+            
+        });
+        return(items)
+    });
     
-
     const onChangeHandler = (e) =>{
         const {name, value} = e.target;
         if (name==='emailConf'){
@@ -84,7 +80,6 @@ const ShoppingForm = () => {
               open={modalEmail}
               onClose={() => setModalEmail(false)}
               onOpen={() => setModalEmail(true)}
-            //   trigger={<Button>Show Modal</Button>}
             >
               <Modal.Header>Ups!</Modal.Header>
               <Modal.Content>

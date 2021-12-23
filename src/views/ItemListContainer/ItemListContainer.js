@@ -40,7 +40,6 @@ const ItemListContainer = ({greeting}) => {
             querySnapshot.forEach((doc) => {
                 docs.push({ ...doc.data(), id:doc.id });
             });
-            console.log('DATA', docs);
             setItems(docs);
             setIsLoading(false);
         };

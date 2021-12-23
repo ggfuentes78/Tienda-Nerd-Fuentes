@@ -17,8 +17,8 @@ const ItemDetail = ({item}) => {
     const stock= item.stock;
 //Muestra mensaje cuando se agregan items al carrito
     
-    const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext); //Totaliza cantidad de items en el carrito
-    
+    const [ , , , , , , , addItem, , , , ] = useContext(CartContext); //Totaliza cantidad de items en el carrito
+
     const [estadoBtnTerminar, setEstadoBtnTerminar] = useState('invisible'); //Determina si el boton Terminar Compra se debe mostrar o no
 
     const [stockDisponible, setStockDisponible] = useState(stock);
@@ -28,8 +28,6 @@ const ItemDetail = ({item}) => {
         setEstadoBtnTerminar('visible')
     }
 
-    console.log (cartContent)
-    
    
 //Arma el detalle de un item (recibido por prop) en un grid de Semantic UI
     return (

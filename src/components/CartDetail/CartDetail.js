@@ -11,20 +11,17 @@ import './CartDetail.css';
 
 
 const CartDetail = ({cantItems, setCantItemsCart}) => {
-    
-    const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+  
+    const [cartContent, , , , cartTotal, , , , removeItem, clear, , ] = useContext(CartContext);
     
     const trashIconClickHandler= (itemId) =>{
-       console.log(cartContent)
        removeItem(itemId);
        setCantItemsCart(cartContent.length);
-       console.log('trash', cartContent)
     }
 
     const clearBtnClickHandler= () =>{
         clear();
         setCantItemsCart(0);
-        console.log('vacio?',cartContent)
     }
     
     return (
@@ -32,7 +29,7 @@ const CartDetail = ({cantItems, setCantItemsCart}) => {
             {cartContent.map((item) => {
                 return (
                     <div className='cartItem'>
-                        <img className='imgItem' src={item.image}/>
+                        <img className='imgItem' src={item.image} alt={item.name}/>
                         <div className='itemDetail'>
                             <h3>{item.name}</h3>
                             <h4>${item.price} x {item.quantity} u</h4>

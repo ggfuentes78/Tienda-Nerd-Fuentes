@@ -19,14 +19,9 @@ import Shopping from './views/Shopping/Shopping';
 //React Router Dom 6.0.2
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
-//Firebase
-import { db } from './firebase/firebaseConfig';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-
 
 
 function App() {
-  console.log(process.env.REACT_APP_API_KEY)
   const clickHandler= (e) =>{
     e.stopPropagation()
 }

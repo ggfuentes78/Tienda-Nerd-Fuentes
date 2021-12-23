@@ -14,7 +14,8 @@ import { useContext} from 'react';
 //NavBar de la aplicacion con los links a las distintas categorias
 const NavBar = () =>{
 
-  const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+  // const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+  const [ , , , totalItems, , , , , , , , ] = useContext(CartContext);
 
   return(
       <nav>
@@ -29,7 +30,6 @@ const NavBar = () =>{
                 <NavLink activeclassname="active" to="/category/bazar" className="Link">Bazar</NavLink>
                 <NavLink activeclassname="active" to="/category/coleccionables" className="Link">Coleccionables</NavLink>
                 <NavLink activeclassname="active" to="/category/accesorios" className="Link">Accesorios</NavLink>
-                {/* <NavLink activeclassname="active" to="/contacto" className="Link">Contacto</NavLink> */}
               </ul>
             </div>
             <Link to="/cart" className="link">

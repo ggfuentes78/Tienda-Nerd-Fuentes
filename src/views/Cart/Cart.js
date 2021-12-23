@@ -12,7 +12,7 @@ import{ Link } from "react-router-dom"
 
 const Cart = () =>{
 
-    const [cartContent, setCartContent, setTotalItems, totalItems, cartTotal, setCartTotal, calculaTotal , addItem, removeItem, clear, isInCart, cartIndex] = useContext(CartContext);
+    const [cartContent, , , , , ,  , , , , , ] = useContext(CartContext);
 
     const [cantItemsCart, setCantItemsCart] = useState(cartContent.length);
 
