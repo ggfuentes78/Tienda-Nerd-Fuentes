@@ -17,6 +17,7 @@ Se trata de una tienda online que ofrece productos de la cultura pop actuales y 
 
 ![image](https://user-images.githubusercontent.com/89048198/147253371-74b5bb93-143f-4f04-addd-9d441cbe2ff5.png)
 
+![image](https://giphy.com/embed/CBMBRNeel3eNHDg0hV)
 
 ## Instrucciones de instalación y configuración
 
